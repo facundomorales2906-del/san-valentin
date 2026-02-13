@@ -1,0 +1,80 @@
+Perfecto. Seguimos desde “Pega el código”.
+
+Ahora mismo deberías estar en la pantalla donde arriba dice:
+
+Name your file
+
+Y ya escribiste:
+
+index.html
+
+🔹 Ahora haz esto exactamente:
+
+En el cuadro grande de abajo (editor de texto vacío)
+👉 Borra cualquier cosa que haya (si hay algo).
+
+Copia TODO este código completo:
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>San Valentín 💖</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background-color: #ffccd5;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+#yes {
+  background-color: #ff4d6d;
+  color: white;
+  transition: 0.3s;
+}
+
+#no {
+  background-color: #555;
+  color: white;
+  position: relative;
+}
+</style>
+</head>
+<body>
+
+<h1>¿Quieres ser mi San Valentín? 💘</h1>
+
+<button id="yes" onclick="yesClicked()">Sí 💖</button>
+<button id="no" onclick="noClicked()">No 😢</button>
+
+<script>
+let size = 20;
+
+function noClicked() {
+  size += 15;
+  document.getElementById("yes").style.fontSize = size + "px";
+
+  const noBtn = document.getElementById("no");
+  noBtn.style.position = "absolute";
+  noBtn.style.top = Math.random() * window.innerHeight + "px";
+  noBtn.style.left = Math.random() * window.innerWidth + "px";
+}
+
+function yesClicked() {
+  document.body.innerHTML = "<h1>💖 pastelito mio, te invito a pasar el 14 de febrero conmigo, te amo 💖</h1>";
+}
+</script>
+
+</body>
+</html>
